@@ -1,0 +1,82 @@
+/* Filters Styling */
+.filter-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--light-peach);
+}
+
+.filter-group { display: flex; flex-direction: column; gap: 8px; }
+
+.filter-group label { font-weight: 600; color: var(--dark-maroon); font-size: 0.9rem; }
+
+.filter-group select {
+    padding: 10px;
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.btn-fetch {
+    background: var(--deep-red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-fetch:hover { background: var(--dark-maroon); }
+
+/* Table Styling */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.academic-table { width: 100%; border-collapse: collapse; }
+
+.academic-table th {
+    background: var(--deep-red);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.academic-table td { padding: 15px; border-bottom: 1px solid #eee; color: var(--dark-maroon); }
+
+.alt-row { background-color: #fff9f8; } /* Light touch of peach for alternate rows */
+
+.grade { font-weight: 800; color: var(--bright-red); }
+
+/* Summary Row */
+.summary-row { background: var(--dark-maroon); color: white; font-weight: bold; }
+
+.summary-row td { padding: 20px; border: none; color: white; }
+
+.sgpa-value { text-align: right; color: var(--light-peach) !important; font-size: 1.2rem; }
+
+/* Download Button */
+.report-action { margin-top: 20px; display: flex; justify-content: flex-end; }
+
+.btn-download {
+    background: var(--bright-red);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}

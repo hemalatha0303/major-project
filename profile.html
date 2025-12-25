@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - ERP Portal</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link rel="stylesheet" href="profile-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>STUDENT ERP</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item" onclick="window.location.href='dashboard.html'"><i class="fas fa-th-large"></i> Dashboard</li>
+                <li class="nav-item" onclick="window.location.href='academics.html'"><i class="fas fa-book-open"></i> Academics</li>
+                <li class="nav-item" onclick="window.location.href='fee.html'"><i class="fas fa-credit-card"></i> Fee Details</li>
+                <li class="nav-item" onclick="window.location.href='library.html'"><i class="fas fa-university"></i> Library</li>
+                <li class="nav-item" onclick="window.location.href='attendance.html'"><i class="fas fa-calendar-check"></i> Attendance</li>
+                <li class="nav-item active" onclick="window.location.href='profile.html'"><i class="fas fa-user-circle"></i> Profile</li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="btn-logout" onclick="window.location.href='login.html'">Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-container">
+            <header class="top-nav">
+                <div class="page-title"><h2>My Profile</h2></div>
+                <div class="user-profile"><span>Welcome, <strong>Hemalatha Donapati</strong></span><div class="avatar">HL</div></div>
+            </header>
+
+            <section class="content-body">
+                <div class="profile-header-card">
+                    <div class="profile-pic">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-intro">
+                        <h1>Hemalatha Donapati</h1>
+                        <p>ID: 22BQ1A4240 | <span class="badge">Student</span></p>
+                    </div>
+                </div>
+
+                <div class="profile-grid">
+                    <div class="card info-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Academic Details</h3>
+                        <div class="data-row"><span>Current Year</span><strong>III Year</strong></div>
+                        <div class="data-row"><span>Semester</span><strong>I Semester</strong></div>
+                        <div class="data-row"><span>Department</span><strong>Computer Science</strong></div>
+                        <div class="data-row"><span>Batch</span><strong>2022 - 2026</strong></div>
+                    </div>
+
+                    <div class="card info-card">
+                        <h3><i class="fas fa-id-card"></i> Admission Info</h3>
+                        <div class="data-row"><span>Admission Date</span><strong>14-oct-2022</strong></div>
+                        <div class="data-row"><span>Admission Type</span><strong>Regular</strong></div>
+                        <div class="data-row"><span>Quota</span><strong>Merit</strong></div>
+                    </div>
+
+                    <div class="card info-card">
+                        <h3><i class="fas fa-user"></i> Personal Details</h3>
+                        <div class="data-row"><span>Date of Birth</span><strong>29-Aug-2004</strong></div>
+                        <div class="data-row"><span>Gender</span><strong>Female</strong></div>
+                        <div class="data-row"><span>Blood Group</span><strong>A+</strong></div>
+                    </div>
+
+                    <div class="card info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Contact Details</h3>
+                        <div class="data-row"><span>Email</span><strong>hemalatha@univ.edu</strong></div>
+                        <div class="data-row"><span>Phone</span><strong>+91 98765 43210</strong></div>
+                        <div class="data-row"><span>Address</span><strong>VVITU , Guntur, Andhra Pradesh.</strong></div>
+                    </div>
+                </div>
+
+                <div class="lock-notice">
+                    <i class="fas fa-lock"></i>
+                    <strong>Read-Only Profile:</strong> These details are locked. Please contact the <strong>Higher Authority</strong> or <strong>HOD</strong> to request any updates.
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

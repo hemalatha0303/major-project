@@ -1,0 +1,157 @@
+/* Color Palette Variables */
+:root {
+    --bright-red: #CD1C18;
+    --light-peach: #FFA896;
+    --deep-red: #9B1313;
+    --dark-maroon: #38000A;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background: linear-gradient(135deg, var(--dark-maroon) 0%, var(--deep-red) 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flashcard Container */
+.login-flashcard {
+    background: white;
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.login-header {
+    background: var(--deep-red);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.login-header i { font-size: 2.5rem; margin-bottom: 10px; color: var(--light-peach); }
+
+.login-body { padding: 30px; }
+
+.form-group { margin-bottom: 20px; }
+
+label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-maroon);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+select, input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fdfdfd;
+}
+
+.input-with-icon { position: relative; }
+.input-with-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--deep-red);
+}
+.input-with-icon input { padding-left: 35px; }
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: var(--bright-red);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-login:hover { background: var(--deep-red); }
+
+.login-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background: var(--light-peach);
+    color: var(--dark-maroon);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--deep-red);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+/* ABOUT MODAL (The "About Page") */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: slideDown 0.4s;
+}
+
+.modal-header {
+    background: var(--dark-maroon);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-modal { font-size: 28px; cursor: pointer; color: var(--light-peach); }
+
+.modal-body { padding: 30px; line-height: 1.6; }
+
+.modal-body h3 { color: var(--bright-red); margin-bottom: 10px; }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+    background: #fff5f3;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.modal-body ul { list-style: none; }
+.modal-body ul li::before { content: "• "; color: var(--bright-red); font-weight: bold; }
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

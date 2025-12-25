@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Portal - Login</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <div class="login-flashcard">
+            <div class="login-header">
+                <i class="fas fa-university"></i>
+                <h2>University ERP</h2>
+            </div>
+
+            <div class="login-body">
+                <div class="form-group">
+                    <label>Login as Administrator</label>
+                    <select id="role">
+                        <option value="student">Student</option>
+                        <option value="faculty">Faculty</option>
+                        <option value="hod">HOD</option>
+                        <option value="administrator">Administrator</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" placeholder="Enter ID" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button class="btn-login" onclick="window.location.href='dashboard.html'">Login</button>
+                
+                <div class="login-footer">
+                    
+                    <button class="btn-secondary" id="openAbout" onclick="window.location.href='about.html'">
+                        About Project
+                    </button>
+                    <button class="btn-text">Forgot Password?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Project Information</h2>
+                <span class="close-modal" id="closeAbout">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>ERP-based Integrated Student Management System</h3>
+                <p class="objective"><strong>Vision:</strong> A centralized platform to reduce manual work and improve data transparency.</p>
+                
+                <div class="about-grid">
+                    <div class="grid-item">
+                        <h4>Users</h4>
+                        <ul>
+                            <li>Student & Faculty</li>
+                            <li>Department & Admin</li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Technologies</h4>
+                        <ul>
+                            <li>HTML/CSS/JS</li>
+                            <li>Python/Node.js</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="requirements">
+                    <h4>Core Features</h4>
+                    <ul>
+                        <li>Role-based Access Control</li>
+                        <li>Automated Fee & Library Tracking</li>
+                        <li>Integrated Query Chatbot</li>
+                        <li>Export Reports (PDF/Excel)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple logic to toggle the About modal
+        const span = document.getElementById("closeAbout");
+
+        btn.onclick = () => modal.style.display = "flex";
+        span.onclick = () => modal.style.display = "none";
+        window.onclick = (event) => {
+            if (event.target == modal) modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

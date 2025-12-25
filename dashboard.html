@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>STUDENT ERP</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item" onclick="window.location.href='dashboard.html'">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='academics.html'">
+                    <i class="fas fa-book-open"></i> Academics
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='fee.html'">
+                    <i class="fas fa-credit-card"></i> Fee Details
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='library.html'">
+                    <i class="fas fa-university"></i> Library
+                </li>
+
+                <li class="nav-item" onclick="window.location.href='attendance.html'">
+                    <i class="fas fa-calendar-check"></i> Attendance
+                </li>
+
+                <li class="nav-item" onclick="window.location.href='profile.html'">
+                    <i class="fas fa-user-circle"></i> Profile
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <button class="btn-logout" onclick="window.location.href='login.html'">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-container">
+            <header class="top-nav">
+                <div class="page-title">
+                    <h2 id="view-title">Dashboard Overview</h2>
+                </div>
+                <div class="user-profile">
+                    <span>Welcome, <strong>Hemalatha Donapati</strong></span>
+                    <div class="avatar">HL</div>
+                </div>
+            </header>
+
+            <section class="content-body" id="main-view">
+                <div class="dashboard-grid">
+                    <div class="welcome-banner">
+                        <h1>Welcome back, Hemalatha Donapati...!</h1>
+                        <p>Keep track of your academic progress and university updates.</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="label">Current Year</span>
+                            <span class="value">III Year</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="label">Current Semester</span>
+                            <span class="value">I Semester</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="label">Fee Status</span>
+                            <span class="value status-paid">Paid</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="label">Attendance</span>
+                            <span class="value">88.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function loadContent(view) {
+            const viewTitle = document.getElementById('view-title');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            // Update Active State in UI
+            navItems.forEach(item => item.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Logic to update viewTitle (Actual page content logic will follow)
+            viewTitle.innerText = view.charAt(0).toUpperCase() + view.slice(1);
+        }
+    </script>
+</body>
+</html>

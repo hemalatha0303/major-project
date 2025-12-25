@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - ERP Portal</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link rel="stylesheet" href="academics-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>STUDENT ERP</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item" onclick="window.location.href='dashboard.html'">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='academics.html'">
+                    <i class="fas fa-book-open"></i> Academics
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='fee.html'">
+                    <i class="fas fa-credit-card"></i> Fee Details
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='library.html'">
+                    <i class="fas fa-university"></i> Library
+                </li>
+
+                <li class="nav-item" onclick="window.location.href='attendance.html'">
+                    <i class="fas fa-calendar-check"></i> Attendance
+                </li>
+
+                <li class="nav-item" onclick="window.location.href='profile.html'">
+                    <i class="fas fa-user-circle"></i> Profile
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="btn-logout" onclick="window.location.href='login.html'">Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-container">
+            <header class="top-nav">
+                <div class="page-title"><h2>Academic Records</h2></div>
+                <div class="user-profile"><span>Welcome, <strong>Hemalatha Donapati</strong></span><div class="avatar">HL</div></div>
+            </header>
+
+            <section class="content-body">
+                <div class="filter-card">
+                    <div class="filter-group">
+                        <label>Select Year</label>
+                        <select id="year-select">
+                            <option value="1">Year I</option>
+                            <option value="2">Year II</option>
+                            <option value="3" selected>Year III</option>
+                            <option value="4">Year IV</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Select Semester</label>
+                        <select id="sem-select">
+                            <option value="1" selected>Semester I</option>
+                            <option value="2">Semester II</option>
+                        </select>
+                    </div>
+                    <button class="btn-fetch"><i class="fas fa-search"></i> Get Results</button>
+                </div>
+
+                <div class="table-container">
+                    
+                    <table class="academic-table">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Mid Marks (25)</th>
+                                <th>Sem Grade</th>
+                                <th>Grade Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Operating Systems</td>
+                                <td>23</td>
+                                <td class="grade">A+</td>
+                                <td>9.0</td>
+                            </tr>
+                            <tr class="alt-row">
+                                <td>Computer Networks</td>
+                                <td>21</td>
+                                <td class="grade">A</td>
+                                <td>8.5</td>
+                            </tr>
+                            <tr>
+                                <td>Software Engineering</td>
+                                <td>24</td>
+                                <td class="grade">O</td>
+                                <td>10.0</td>
+                            </tr>
+                            <tr class="alt-row">
+                                <td>Database Management</td>
+                                <td>22</td>
+                                <td class="grade">A+</td>
+                                <td>9.0</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="summary-row">
+                                <td colspan="2">Semester Performance Index (SGPA)</td>
+                                <td colspan="2" class="sgpa-value">9.13 / 10.0</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="report-action">
+                    <button class="btn-download"><i class="fas fa-file-pdf"></i> Download Marks Memo</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

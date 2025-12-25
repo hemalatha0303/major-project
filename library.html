@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - ERP Portal</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link rel="stylesheet" href="library-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>STUDENT ERP</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item" onclick="window.location.href='dashboard.html'">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='academics.html'">
+                    <i class="fas fa-book-open"></i> Academics
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='fee.html'">
+                    <i class="fas fa-credit-card"></i> Fee Details
+                </li>
+                
+                <li class="nav-item" onclick="window.location.href='library.html'">
+                    <i class="fas fa-university"></i> Library
+                </li>
+
+                <li class="nav-item" onclick="window.location.href='attendance.html'">
+                    <i class="fas fa-calendar-check"></i> Attendance
+                </li>
+
+                <li class="nav-item" onclick="window.location.href='profile.html'">
+                    <i class="fas fa-user-circle"></i> Profile
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="btn-logout" onclick="window.location.href='login.html'">Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-container">
+            <header class="top-nav">
+                <div class="page-title"><h2>Digital Library</h2></div>
+                <div class="user-profile"><span>Welcome, <strong>Hemalatha Donapati</strong></span><div class="avatar">HL</div></div>
+            </header>
+
+            <section class="content-body">
+                <div class="search-card">
+                    <h3>Find a Resource</h3>
+                    <div class="search-bar">
+                        <input type="text" id="bookInput" placeholder="Enter book name, author, or ISBN...">
+                        <button class="btn-search" onclick="dummySearch()"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                </div>
+
+                <div id="searchResults" class="results-container"></div>
+
+                <div class="issued-section">
+                    <h3>Your Borrowed Books</h3>
+                    <div class="table-container">
+                        <table class="library-table">
+                            <thead>
+                                <tr>
+                                    <th>Book Name</th>
+                                    <th>Issue Date</th>
+                                    <th>Due Date</th>
+                                    <th>Digital Version</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="borrowedList">
+                                <tr>
+                                    <td>Modern Operating Systems</td>
+                                    <td>10-Dec-2025</td>
+                                    <td>24-Dec-2025</td>
+                                    <td><a href="#" class="link-red">View PDF</a></td>
+                                    <td><button class="btn-renew">Renew</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function dummySearch() {
+            const results = document.getElementById('searchResults');
+            results.innerHTML = `
+                <div class="book-result-card">
+                    <div class="book-info">
+                        <h4>Database System Concepts (7th Ed)</h4>
+                        <p class="summary">A comprehensive guide to database management, covering SQL, Normalization, and Transactions.</p>
+                        <div class="book-meta">
+                            <span><strong>Issue Date:</strong> --</span>
+                            <span><strong>Due Date:</strong> --</span>
+                        </div>
+                    </div>
+                    <div class="book-actions">
+                        <a href="#" class="btn-digital"><i class="fas fa-external-link-alt"></i> Preview</a>
+                        <button class="btn-add" onclick="addBook()">+ Add to My List</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function addBook() {
+            alert("Book has been added to your borrowed list with permission from Higher Authority.");
+            // In real app, this would trigger a database POST request
+        }
+    </script>
+</body>
+</html>
